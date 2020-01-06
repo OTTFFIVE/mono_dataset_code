@@ -27,9 +27,6 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-
-
-
 #include "opencv2/opencv.hpp"
 #include "opencv2/video/tracking.hpp"
 
@@ -40,12 +37,9 @@
 
 #include "BenchmarkDatasetReader.h"
 
-
 int leakPadding=2;
 int nits = 10;
 int skipFrames = 1;
-
-
 
 Eigen::Vector2d rmse(double* G, double* E, std::vector<double> &exposureVec, std::vector<unsigned char*> &dataVec,  int wh)
 {
@@ -55,7 +49,7 @@ Eigen::Vector2d rmse(double* G, double* E, std::vector<double> &exposureVec, std
 	int n = dataVec.size();
 	for(int i=0;i<n;i++)
 	{
-		for(int k=0;k<wh;k++)
+		for(int k=0; k<wh; k++)
 		{
 			if(dataVec[i][k] == 255) continue;
 			double r = G[dataVec[i][k]] - exposureVec[i]*E[k];
@@ -68,30 +62,32 @@ Eigen::Vector2d rmse(double* G, double* E, std::vector<double> &exposureVec, std
 	return Eigen::Vector2d(1e5*sqrtl((e/num)), (double)num);
 }
 
-
 void plotE(double* E, int w, int h, std::string saveTo="")
 {
-
 	// try to find some good color scaling for plotting.
 	double offset = 20;
 	double min=1e10, max=-1e10;
 
 	double Emin=1e10, Emax=-1e10;
 
-	for(int i=0;i<w*h;i++)
+	for(int i=0; i<w*h; i++)
 	{
 		double le = log(E[i]+offset);
-		if(le < min) min = le;
-		if(le > max) max = le;
+		if(le < min)
+		    min = le;
+		if(le > max)
+		    max = le;
 
-		if(E[i] < Emin) Emin = E[i];
-		if(E[i] > Emax) Emax = E[i];
+		if(E[i] < Emin)
+		    Emin = E[i];
+		if(E[i] > Emax)
+		    Emax = E[i];
 	}
 
 	cv::Mat EImg = cv::Mat(h,w,CV_8UC3);
 	cv::Mat EImg16 = cv::Mat(h,w,CV_16U);
 
-	for(int i=0;i<w*h;i++)
+	for(int i=0; i<w*h; i++)
 	{
 		float val = 3 * (exp((log(E[i]+offset)-min) / (max-min))-1) / 1.7183;
 
@@ -108,7 +104,7 @@ void plotE(double* E, int w, int h, std::string saveTo="")
 		EImg16.at<ushort>(i) = 255* 255* (E[i]-Emin) / (Emax-Emin);
 	}
 
-	printf("Irradiance %f - %f\n", Emin, Emax);
+    printf("Irradiance %f - %f\n", Emin, Emax);
 	cv::imshow("lnE", EImg);
 
 	if(saveTo != "")
@@ -124,16 +120,18 @@ void plotG(double* G, std::string saveTo="")
 
 	double min=1e10, max=-1e10;
 
-	for(int i=0;i<256;i++)
+	for(int i=0; i<256; i++)
 	{
-		if(G[i] < min) min = G[i];
-		if(G[i] > max) max = G[i];
+		if(G[i] < min)
+		    min = G[i];
+		if(G[i] > max)
+		    max = G[i];
 	}
 
-	for(int i=0;i<256;i++)
+	for(int i=0; i<256; i++)
 	{
-		double val = 256*(G[i]-min) / (max-min);
-		for(int k=0;k<256;k++)
+        double val = 256*(G[i]-min) / (max-min);
+        for(int k=0; k<256; k++)
 		{
 			if(val < k)
 				GImg.at<float>(k,i) = k-val;
@@ -142,9 +140,10 @@ void plotG(double* G, std::string saveTo="")
 
 	printf("Inv. Response %f - %f\n", min, max);
 	cv::imshow("G", GImg);
-	if(saveTo != "") cv::imwrite(saveTo, GImg*255);
-}
 
+	if(saveTo != "")
+	    cv::imwrite(saveTo, GImg*255);
+}
 
 void parseArgument(char* arg)
 {
@@ -173,48 +172,55 @@ void parseArgument(char* arg)
 }
 
 
-
 int main( int argc, char** argv )
 {
 	// parse arguments
-	for(int i=2; i<argc;i++)
+	for(int i=2; i<argc; i++)
 		parseArgument(argv[i]);
-
 
 	// load exposure times & images.
 	// first parameter is dataset location.
 	int w=0,h=0,n=0;
 
-
 	DatasetReader* reader = new DatasetReader(argv[1]);
 	std::vector<double> exposureVec;
 	std::vector<unsigned char*> dataVec;
-	for(int i=0;i<reader->getNumImages();i+=skipFrames)
+	for(int i=0; i<reader->getNumImages(); i+=skipFrames)
 	{
 		cv::Mat img = reader->getImageRaw_internal(i);
-		if(img.rows==0 || img.cols==0) continue;
+		if(img.rows==0 || img.cols==0)
+		    continue;
 		assert(img.type() == CV_8U);
 
 		if((w!=0 && w != img.cols) || img.cols==0)
-		{ printf("width mismatch!\n"); exit(1); };
+		{
+		    printf("width mismatch!\n");
+		    exit(1);
+		}
+
 		if((h!=0 && h != img.rows) || img.rows==0)
-		{ printf("height mismatch!\n"); exit(1); };
+		{
+		    printf("height mismatch!\n");
+		    exit(1);
+		}
+
 		w = img.cols;
 		h = img.rows;
 
 
 		unsigned char* data = new unsigned char[img.rows*img.cols];
 		memcpy(data, img.data, img.rows*img.cols);
+
 		dataVec.push_back(data);
 		exposureVec.push_back((double)(reader->getExposure(i)));
 
 
 		unsigned char* data2 = new unsigned char[img.rows*img.cols];
-		for(int it=0;it<leakPadding;it++)
+		for(int it=0; it<leakPadding; it++)
 		{
 			memcpy(data2, data, img.rows*img.cols);
-			for(int y=1;y<h-1;y++)
-				for(int x=1;x<w-1;x++)
+			for(int y=1; y<h-1; y++)
+				for(int x=1; x<w-1; x++)
 				{
 					if(data[x+y*w]==255)
 					{
@@ -249,36 +255,37 @@ int main( int argc, char** argv )
 	memset(E,0,sizeof(double)*w*h);
 	memset(En,0,sizeof(double)*w*h);
 	memset(G,0,sizeof(double)*256);
-	for(int i=0;i<n;i++)
-		for(int k=0;k<w*h;k++)
-		{
-			//if(dataVec[i][k]==255) continue;
-			E[k] += dataVec[i][k];
-			En[k] ++;
-		}
-	for(int k=0;k<w*h;k++) E[k] = E[k]/En[k];
+	for(int i=0; i<n; i++)
+    {
+        for(int k=0; k<w*h; k++)
+        {
+            //if(dataVec[i][k]==255) continue;
+            E[k] += dataVec[i][k];
+            En[k] ++;
+        }
+    }
 
+	for(int k=0; k<w*h; k++)
+	    E[k] = E[k]/En[k];
 
+	if(-1 == system("rm -rf photoCalibResult"))
+	    printf("could not delete old photoCalibResult folder!\n");
 
-	if(-1 == system("rm -rf photoCalibResult")) printf("could not delete old photoCalibResult folder!\n");
-	if(-1 == system("mkdir photoCalibResult")) printf("could not create photoCalibResult folder!\n");
-
+	if(-1 == system("mkdir photoCalibResult"))
+	    printf("could not create photoCalibResult folder!\n");
 
 	std::ofstream logFile;
 	logFile.open("photoCalibResult/log.txt", std::ios::trunc | std::ios::out);
 	logFile.precision(15);
 
-
 	printf("init RMSE = %f! \t", rmse(G, E, exposureVec, dataVec, w*h )[0]);
 	plotE(E,w,h, "photoCalibResult/E-0");
 	cv::waitKey(100);
 
-
 	bool optE = true;
 	bool optG = true;
 
-
-	for(int it=0;it<nits;it++)
+	for(int it=0; it<nits; it++)    //迭代10次
 	{
 		if(optG)
 		{
@@ -287,31 +294,32 @@ int main( int argc, char** argv )
 			double* GNum = new double[256];
 			memset(GSum,0,256*sizeof(double));
 			memset(GNum,0,256*sizeof(double));
-			for(int i=0;i<n;i++)
+			for(int i=0; i<n; i++)  //遍历数据集中的图像
 			{
-				for(int k=0;k<w*h;k++)
+				for(int k=0; k<w*h; k++)    //遍历图像中所有的像素
 				{
 					int b = dataVec[i][k];
 					if(b == 255) continue;
-					GNum[b]++;
-					GSum[b]+= E[k] * exposureVec[i];
+					GNum[b]++;  //像素值为b的像素点个数
+					GSum[b]+= E[k] * exposureVec[i];    //累计的ti*B'(x)
 				}
 			}
-			for(int i=0;i<256;i++)
+			for(int i=0; i<256; i++)
 			{
 				G[i] = GSum[i] / GNum[i];
-				if(!std::isfinite(G[i]) && i > 1) G[i] = G[i-1] + (G[i-1]-G[i-2]);
+
+				if(!std::isfinite(G[i]) && i > 1)
+				    G[i] = G[i-1] + (G[i-1]-G[i-2]);
 			}
 			delete[] GSum;
 			delete[] GNum;
 			printf("optG RMSE = %f! \t", rmse(G, E, exposureVec, dataVec, w*h )[0]);
 
-			char buf[1000]; snprintf(buf, 1000, "photoCalibResult/G-%d.png", it+1);
+			char buf[1000];
+			snprintf(buf, 1000, "photoCalibResult/G-%d.png", it+1);
+
 			plotG(G, buf);
 		}
-
-
-
 
 
 		if(optE)
@@ -321,20 +329,24 @@ int main( int argc, char** argv )
 			double* ENum = new double[w*h];
 			memset(ESum,0,w*h*sizeof(double));
 			memset(ENum,0,w*h*sizeof(double));
-			for(int i=0;i<n;i++)
+			for(int i=0; i<n; i++)
 			{
-				for(int k=0;k<w*h;k++)
+				for(int k=0; k<w*h; k++)
 				{
 					int b = dataVec[i][k];
-					if(b == 255) continue;
-					ENum[k] += exposureVec[i]*exposureVec[i];
+					if(b == 255)
+					    continue;
+
+					ENum[k] += exposureVec[i] * exposureVec[i];
 					ESum[k] += (G[b]) * exposureVec[i];
 				}
 			}
-			for(int i=0;i<w*h;i++)
+			for(int i=0; i<w*h; i++)
 			{
 				E[i] = ESum[i] / ENum[i];
-				if(E[i] < 0) E[i] = 0;
+
+				if(E[i] < 0)
+				    E[i] = 0;
 			}
 
 			delete[] ENum;
@@ -345,14 +357,15 @@ int main( int argc, char** argv )
 			plotE(E,w,h, buf);
 		}
 
-
 		// rescale such that maximum response is 255 (fairly arbitrary choice).
 		double rescaleFactor=255.0 / G[255];
-		for(int i=0;i<w*h;i++)
+		for(int i=0; i<w*h; i++)
 		{
 			E[i] *= rescaleFactor;
-			if(i<256) G[i] *= rescaleFactor;
+			if(i<256)
+			    G[i] *= rescaleFactor;
 		}
+
 		Eigen::Vector2d err = rmse(G, E, exposureVec, dataVec, w*h );
 		printf("resc RMSE = %f!  \trescale with %f!\n",  err[0], rescaleFactor);
 
@@ -367,7 +380,7 @@ int main( int argc, char** argv )
 	std::ofstream lg;
 	lg.open("photoCalibResult/pcalib.txt", std::ios::trunc | std::ios::out);
 	lg.precision(15);
-	for(int i=0;i<256;i++)
+	for(int i=0; i<256; i++)
 		lg << G[i] << " ";
 	lg << "\n";
 

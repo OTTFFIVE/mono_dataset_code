@@ -59,13 +59,11 @@ UndistorterFOV::UndistorterFOV(const char* configFileName)
 		return;
 	}
 
-
 	std::string l1,l2,l3,l4;
 	std::getline(infile,l1);
 	std::getline(infile,l2);
 	std::getline(infile,l3);
 	std::getline(infile,l4);
-
 
 	// l1 & l2
 	if(std::sscanf(l1.c_str(), "%f %f %f %f %f", &inputCalibration[0], &inputCalibration[1], &inputCalibration[2], &inputCalibration[3], &inputCalibration[4]) == 5 &&
@@ -80,7 +78,6 @@ UndistorterFOV::UndistorterFOV(const char* configFileName)
 		printf("Failed to read camera calibration (invalid format?)\nCalibration file: %s\n", configFileName);
 		return;
 	}
-
 
 	// l3
 	if(l3 == "crop")
@@ -108,8 +105,6 @@ UndistorterFOV::UndistorterFOV(const char* configFileName)
 		printf("Out: Failed to Read Output pars... not rectifying.\n");
 		return;
 	}
-
-
 
 	// l4
 	if(std::sscanf(l4.c_str(), "%d %d", &out_width, &out_height) == 2)
@@ -139,6 +134,8 @@ UndistorterFOV::UndistorterFOV(const char* configFileName)
 
 	// output camera parameters
 	float ofx, ofy, ocx, ocy;
+
+//  (fx/width fy/height cx/width cy/height d),其中第五个参数d表示视场角(field of view)
 
 	// find new camera matrix for "crop" and "full"
 	if (inputCalibration[4] == 0)
@@ -285,7 +282,6 @@ void UndistorterFOV::distortCoordinates(float* in_x, float* in_y, int n)
 		return;
 	}
 
-
 	float dist = inputCalibration[4];
 	float d2t = 2.0f * tan(dist / 2.0f);
 
@@ -295,12 +291,12 @@ void UndistorterFOV::distortCoordinates(float* in_x, float* in_y, int n)
 	float cx = inputCalibration[2] * in_width - 0.5;
 	float cy = inputCalibration[3] * in_height - 0.5;
 
-	float ofx = outputCalibration[0]*out_width;
-	float ofy = outputCalibration[1]*out_height;
-	float ocx = outputCalibration[2]*out_width-0.5f;
-	float ocy = outputCalibration[3]*out_height-0.5f;
+	float ofx = outputCalibration[0] * out_width;
+	float ofy = outputCalibration[1] * out_height;
+	float ocx = outputCalibration[2] * out_width - 0.5f;
+	float ocy = outputCalibration[3] * out_height - 0.5f;
 
-	for(int i=0;i<n;i++)
+	for(int i=0; i<n; i++)
 	{
 		float x = in_x[i];
 		float y = in_y[i];

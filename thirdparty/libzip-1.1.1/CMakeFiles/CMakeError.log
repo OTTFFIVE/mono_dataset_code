@@ -1,0 +1,504 @@
+Determining if the function _close exists failed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_dc44b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_dc44b.dir/build.make CMakeFiles/cmTC_dc44b.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_dc44b.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=_close   -o CMakeFiles/cmTC_dc44b.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_dc44b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dc44b.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=_close    CMakeFiles/cmTC_dc44b.dir/CheckFunctionExists.c.o  -o cmTC_dc44b -rdynamic 
+CMakeFiles/cmTC_dc44b.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `_close'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_dc44b.dir/build.make:97: recipe for target 'cmTC_dc44b' failed
+make[1]: *** [cmTC_dc44b] Error 1
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_dc44b/fast' failed
+make: *** [cmTC_dc44b/fast] Error 2
+
+
+Determining if the function _dup exists failed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_348c5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_348c5.dir/build.make CMakeFiles/cmTC_348c5.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_348c5.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=_dup   -o CMakeFiles/cmTC_348c5.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_348c5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_348c5.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=_dup    CMakeFiles/cmTC_348c5.dir/CheckFunctionExists.c.o  -o cmTC_348c5 -rdynamic 
+CMakeFiles/cmTC_348c5.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `_dup'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_348c5.dir/build.make:97: recipe for target 'cmTC_348c5' failed
+make[1]: *** [cmTC_348c5] Error 1
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_348c5/fast' failed
+make: *** [cmTC_348c5/fast] Error 2
+
+
+Determining if the function _fdopen exists failed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c6a4f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c6a4f.dir/build.make CMakeFiles/cmTC_c6a4f.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c6a4f.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=_fdopen   -o CMakeFiles/cmTC_c6a4f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c6a4f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c6a4f.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=_fdopen    CMakeFiles/cmTC_c6a4f.dir/CheckFunctionExists.c.o  -o cmTC_c6a4f -rdynamic 
+CMakeFiles/cmTC_c6a4f.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `_fdopen'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_c6a4f.dir/build.make:97: recipe for target 'cmTC_c6a4f' failed
+make[1]: *** [cmTC_c6a4f] Error 1
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_c6a4f/fast' failed
+make: *** [cmTC_c6a4f/fast] Error 2
+
+
+Determining if the function _fileno exists failed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_79d9f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_79d9f.dir/build.make CMakeFiles/cmTC_79d9f.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_79d9f.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=_fileno   -o CMakeFiles/cmTC_79d9f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_79d9f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_79d9f.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=_fileno    CMakeFiles/cmTC_79d9f.dir/CheckFunctionExists.c.o  -o cmTC_79d9f -rdynamic 
+CMakeFiles/cmTC_79d9f.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `_fileno'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_79d9f.dir/build.make:97: recipe for target 'cmTC_79d9f' failed
+make[1]: *** [cmTC_79d9f] Error 1
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_79d9f/fast' failed
+make: *** [cmTC_79d9f/fast] Error 2
+
+
+Determining if the function _open exists failed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4c397/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4c397.dir/build.make CMakeFiles/cmTC_4c397.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4c397.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=_open   -o CMakeFiles/cmTC_4c397.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_4c397
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4c397.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=_open    CMakeFiles/cmTC_4c397.dir/CheckFunctionExists.c.o  -o cmTC_4c397 -rdynamic 
+CMakeFiles/cmTC_4c397.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `_open'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_4c397.dir/build.make:97: recipe for target 'cmTC_4c397' failed
+make[1]: *** [cmTC_4c397] Error 1
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_4c397/fast' failed
+make: *** [cmTC_4c397/fast] Error 2
+
+
+Determining if the function _setmode exists failed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f6522/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f6522.dir/build.make CMakeFiles/cmTC_f6522.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f6522.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=_setmode   -o CMakeFiles/cmTC_f6522.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f6522
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f6522.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=_setmode    CMakeFiles/cmTC_f6522.dir/CheckFunctionExists.c.o  -o cmTC_f6522 -rdynamic 
+CMakeFiles/cmTC_f6522.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `_setmode'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_f6522.dir/build.make:97: recipe for target 'cmTC_f6522' failed
+make[1]: *** [cmTC_f6522] Error 1
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_f6522/fast' failed
+make: *** [cmTC_f6522/fast] Error 2
+
+
+Determining if the function _snprintf exists failed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_82e7d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_82e7d.dir/build.make CMakeFiles/cmTC_82e7d.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_82e7d.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=_snprintf   -o CMakeFiles/cmTC_82e7d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_82e7d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_82e7d.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=_snprintf    CMakeFiles/cmTC_82e7d.dir/CheckFunctionExists.c.o  -o cmTC_82e7d -rdynamic 
+CMakeFiles/cmTC_82e7d.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `_snprintf'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_82e7d.dir/build.make:97: recipe for target 'cmTC_82e7d' failed
+make[1]: *** [cmTC_82e7d] Error 1
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_82e7d/fast' failed
+make: *** [cmTC_82e7d/fast] Error 2
+
+
+Determining if the function _strdup exists failed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_96b5b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_96b5b.dir/build.make CMakeFiles/cmTC_96b5b.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_96b5b.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=_strdup   -o CMakeFiles/cmTC_96b5b.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_96b5b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_96b5b.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=_strdup    CMakeFiles/cmTC_96b5b.dir/CheckFunctionExists.c.o  -o cmTC_96b5b -rdynamic 
+CMakeFiles/cmTC_96b5b.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `_strdup'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_96b5b.dir/build.make:97: recipe for target 'cmTC_96b5b' failed
+make[1]: *** [cmTC_96b5b] Error 1
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_96b5b/fast' failed
+make: *** [cmTC_96b5b/fast] Error 2
+
+
+Determining if the function _stricmp exists failed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4bf68/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4bf68.dir/build.make CMakeFiles/cmTC_4bf68.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4bf68.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=_stricmp   -o CMakeFiles/cmTC_4bf68.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_4bf68
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4bf68.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=_stricmp    CMakeFiles/cmTC_4bf68.dir/CheckFunctionExists.c.o  -o cmTC_4bf68 -rdynamic 
+CMakeFiles/cmTC_4bf68.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `_stricmp'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_4bf68.dir/build.make:97: recipe for target 'cmTC_4bf68' failed
+make[1]: *** [cmTC_4bf68] Error 1
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_4bf68/fast' failed
+make: *** [cmTC_4bf68/fast] Error 2
+
+
+Determining if the function getprogname exists failed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5d76c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5d76c.dir/build.make CMakeFiles/cmTC_5d76c.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5d76c.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=getprogname   -o CMakeFiles/cmTC_5d76c.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_5d76c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5d76c.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=getprogname    CMakeFiles/cmTC_5d76c.dir/CheckFunctionExists.c.o  -o cmTC_5d76c -rdynamic 
+CMakeFiles/cmTC_5d76c.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `getprogname'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_5d76c.dir/build.make:97: recipe for target 'cmTC_5d76c' failed
+make[1]: *** [cmTC_5d76c] Error 1
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_5d76c/fast' failed
+make: *** [cmTC_5d76c/fast] Error 2
+
+
+Determining if the function setmode exists failed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_df23c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_df23c.dir/build.make CMakeFiles/cmTC_df23c.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_df23c.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=setmode   -o CMakeFiles/cmTC_df23c.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_df23c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_df23c.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=setmode    CMakeFiles/cmTC_df23c.dir/CheckFunctionExists.c.o  -o cmTC_df23c -rdynamic 
+CMakeFiles/cmTC_df23c.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `setmode'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_df23c.dir/build.make:97: recipe for target 'cmTC_df23c' failed
+make[1]: *** [cmTC_df23c] Error 1
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_df23c/fast' failed
+make: *** [cmTC_df23c/fast] Error 2
+
+
+Determining if the function stricmp exists failed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f50d9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f50d9.dir/build.make CMakeFiles/cmTC_f50d9.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f50d9.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=stricmp   -o CMakeFiles/cmTC_f50d9.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f50d9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f50d9.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=stricmp    CMakeFiles/cmTC_f50d9.dir/CheckFunctionExists.c.o  -o cmTC_f50d9 -rdynamic 
+CMakeFiles/cmTC_f50d9.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `stricmp'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_f50d9.dir/build.make:97: recipe for target 'cmTC_f50d9' failed
+make[1]: *** [cmTC_f50d9] Error 1
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_f50d9/fast' failed
+make: *** [cmTC_f50d9/fast] Error 2
+
+
+Determining size of __int8 failed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6cca9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6cca9.dir/build.make CMakeFiles/cmTC_6cca9.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6cca9.dir/__INT8_LIBZIP.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_6cca9.dir/__INT8_LIBZIP.c.o   -c /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CheckTypeSize/__INT8_LIBZIP.c
+/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CheckTypeSize/__INT8_LIBZIP.c:17:22: error: ‘__int8’ undeclared here (not in a function)
+ #define SIZE (sizeof(__int8))
+                      ^
+/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CheckTypeSize/__INT8_LIBZIP.c:19:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTC_6cca9.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_6cca9.dir/__INT8_LIBZIP.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_6cca9.dir/__INT8_LIBZIP.c.o] Error 1
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_6cca9/fast' failed
+make: *** [cmTC_6cca9/fast] Error 2
+
+/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CheckTypeSize/__INT8_LIBZIP.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(__int8))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of __int16 failed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1ef64/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1ef64.dir/build.make CMakeFiles/cmTC_1ef64.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1ef64.dir/__INT16_LIBZIP.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_1ef64.dir/__INT16_LIBZIP.c.o   -c /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CheckTypeSize/__INT16_LIBZIP.c
+/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CheckTypeSize/__INT16_LIBZIP.c:17:22: error: ‘__int16’ undeclared here (not in a function)
+ #define SIZE (sizeof(__int16))
+                      ^
+/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CheckTypeSize/__INT16_LIBZIP.c:19:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTC_1ef64.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_1ef64.dir/__INT16_LIBZIP.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_1ef64.dir/__INT16_LIBZIP.c.o] Error 1
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_1ef64/fast' failed
+make: *** [cmTC_1ef64/fast] Error 2
+
+/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CheckTypeSize/__INT16_LIBZIP.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(__int16))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of __int32 failed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7f392/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7f392.dir/build.make CMakeFiles/cmTC_7f392.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7f392.dir/__INT32_LIBZIP.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_7f392.dir/__INT32_LIBZIP.c.o   -c /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CheckTypeSize/__INT32_LIBZIP.c
+/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CheckTypeSize/__INT32_LIBZIP.c:17:22: error: ‘__int32’ undeclared here (not in a function)
+ #define SIZE (sizeof(__int32))
+                      ^
+/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CheckTypeSize/__INT32_LIBZIP.c:19:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTC_7f392.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_7f392.dir/__INT32_LIBZIP.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_7f392.dir/__INT32_LIBZIP.c.o] Error 1
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_7f392/fast' failed
+make: *** [cmTC_7f392/fast] Error 2
+
+/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CheckTypeSize/__INT32_LIBZIP.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(__int32))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of __int64 failed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_623da/fast"
+/usr/bin/make -f CMakeFiles/cmTC_623da.dir/build.make CMakeFiles/cmTC_623da.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_623da.dir/__INT64_LIBZIP.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_623da.dir/__INT64_LIBZIP.c.o   -c /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CheckTypeSize/__INT64_LIBZIP.c
+/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CheckTypeSize/__INT64_LIBZIP.c:17:22: error: ‘__int64’ undeclared here (not in a function)
+ #define SIZE (sizeof(__int64))
+                      ^
+/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CheckTypeSize/__INT64_LIBZIP.c:19:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTC_623da.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_623da.dir/__INT64_LIBZIP.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_623da.dir/__INT64_LIBZIP.c.o] Error 1
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_623da/fast' failed
+make: *** [cmTC_623da/fast] Error 2
+
+/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CheckTypeSize/__INT64_LIBZIP.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(__int64))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+

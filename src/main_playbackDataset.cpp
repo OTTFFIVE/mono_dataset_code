@@ -50,8 +50,6 @@ int main( int argc, char** argv )
 	std::string dataset = argv[1];
 
 
-
-
 	printf("Playback dataset %s!\n", dataset.c_str());
 
 	DatasetReader* reader = new DatasetReader(dataset);
@@ -73,7 +71,7 @@ int main( int argc, char** argv )
 	if(argc > 2)
 	{
 		printf("Saving undistorted Dataset to here!\n");
-		for(int i=0;i<reader->getNumImages();i++)
+		for(int i=0; i<reader->getNumImages(); i++)
 		{
 			ExposureImage* I = reader->getImage(i, true, false, false, false);
 			char buf[1000];
@@ -84,19 +82,13 @@ int main( int argc, char** argv )
 		exit(0);
 	}
 
-
-
-
-
-
 	bool autoPlay = false;
 	bool rect = false;
 	bool removeGamma = false;
 	bool removeVignette = false;
 	bool killOverexposed = false;
 
-
-	for(int i=0;i<reader->getNumImages();i++)
+	for(int i=0; i<reader->getNumImages(); i++)
 	{
 		while(true)
 		{
@@ -106,7 +98,6 @@ int main( int argc, char** argv )
 					I->id, I->timestamp, I->exposure_time,
 					(int)rect, (int)removeGamma, (int)removeVignette, (int)killOverexposed);
 
-
 			char k;
 			if(autoPlay) k = cv::waitKey(1);
 			else k = cv::waitKey(0);
@@ -114,7 +105,6 @@ int main( int argc, char** argv )
 			if(k=='w' || k == 'W') cv::imwrite("img.png", cv::Mat(I->h, I->w, CV_32F, I->image));
 
 			delete I;
-
 
 			if(k==' ') break;
 			if(k=='s' || k == 'S') {i+=30; break;};

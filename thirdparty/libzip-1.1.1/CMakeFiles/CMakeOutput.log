@@ -1,0 +1,687 @@
+The system is: Linux - 4.15.0-72-generic - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/3.5.1/CompilerIdC/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bec52/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bec52.dir/build.make CMakeFiles/cmTC_bec52.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bec52.dir/testCCompiler.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_bec52.dir/testCCompiler.c.o   -c /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_bec52
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bec52.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_bec52.dir/testCCompiler.c.o  -o cmTC_bec52 -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1ba94/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1ba94.dir/build.make CMakeFiles/cmTC_1ba94.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1ba94.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_1ba94.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_1ba94
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1ba94.dir/link.txt --verbose=1
+/usr/bin/cc      -v CMakeFiles/cmTC_1ba94.dir/CMakeCCompilerABI.c.o  -o cmTC_1ba94 -rdynamic  
+Using built-in specs.
+COLLECT_GCC=/usr/bin/cc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.12' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Thread model: posix
+gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.12) 
+COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1ba94' '-rdynamic' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccbMy23t.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_1ba94 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_1ba94.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_1ba94/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_1ba94.dir/build.make CMakeFiles/cmTC_1ba94.dir/build]
+  ignore line: [make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_1ba94.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_1ba94.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_1ba94]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1ba94.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_1ba94.dir/CMakeCCompilerABI.c.o  -o cmTC_1ba94 -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
+  ignore line: [Target: x86_64-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.12' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.12) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1ba94' '-rdynamic' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccbMy23t.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_1ba94 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_1ba94.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccbMy23t.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--sysroot=/] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_1ba94] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
+    arg [CMakeFiles/cmTC_1ba94.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5] ==> [/usr/lib/gcc/x86_64-linux-gnu/5]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> [/usr/lib]
+  implicit libs: [c]
+  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/5;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+  implicit fwks: []
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0a316/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0a316.dir/build.make CMakeFiles/cmTC_0a316.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0a316.dir/feature_tests.c.o
+/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_0a316.dir/feature_tests.c.o   -c /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/feature_tests.c
+Linking C executable cmTC_0a316
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0a316.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_0a316.dir/feature_tests.c.o  -o cmTC_0a316 -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:1c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2e21e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2e21e.dir/build.make CMakeFiles/cmTC_2e21e.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2e21e.dir/feature_tests.c.o
+/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_2e21e.dir/feature_tests.c.o   -c /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/feature_tests.c
+Linking C executable cmTC_2e21e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2e21e.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_2e21e.dir/feature_tests.c.o  -o cmTC_2e21e -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c90] compiler features compiled with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8fd58/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8fd58.dir/build.make CMakeFiles/cmTC_8fd58.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8fd58.dir/feature_tests.c.o
+/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_8fd58.dir/feature_tests.c.o   -c /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/feature_tests.c
+Linking C executable cmTC_8fd58
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8fd58.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_8fd58.dir/feature_tests.c.o  -o cmTC_8fd58 -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:0c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:0c_variadic_macros
+Determining if the function fileno exists passed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_26867/fast"
+/usr/bin/make -f CMakeFiles/cmTC_26867.dir/build.make CMakeFiles/cmTC_26867.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_26867.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=fileno   -o CMakeFiles/cmTC_26867.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_26867
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_26867.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=fileno    CMakeFiles/cmTC_26867.dir/CheckFunctionExists.c.o  -o cmTC_26867 -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+Determining if the function fseeko exists passed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_264f1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_264f1.dir/build.make CMakeFiles/cmTC_264f1.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_264f1.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=fseeko   -o CMakeFiles/cmTC_264f1.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_264f1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_264f1.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=fseeko    CMakeFiles/cmTC_264f1.dir/CheckFunctionExists.c.o  -o cmTC_264f1 -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+Determining if the function ftello exists passed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_26f59/fast"
+/usr/bin/make -f CMakeFiles/cmTC_26f59.dir/build.make CMakeFiles/cmTC_26f59.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_26f59.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=ftello   -o CMakeFiles/cmTC_26f59.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_26f59
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_26f59.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=ftello    CMakeFiles/cmTC_26f59.dir/CheckFunctionExists.c.o  -o cmTC_26f59 -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+Determining if the function open exists passed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_dd20c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_dd20c.dir/build.make CMakeFiles/cmTC_dd20c.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_dd20c.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=open   -o CMakeFiles/cmTC_dd20c.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_dd20c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dd20c.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=open    CMakeFiles/cmTC_dd20c.dir/CheckFunctionExists.c.o  -o cmTC_dd20c -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+Determining if the function mkstemp exists passed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c4195/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c4195.dir/build.make CMakeFiles/cmTC_c4195.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c4195.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=mkstemp   -o CMakeFiles/cmTC_c4195.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c4195
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c4195.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=mkstemp    CMakeFiles/cmTC_c4195.dir/CheckFunctionExists.c.o  -o cmTC_c4195 -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+Determining if the function snprintf exists passed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_70c61/fast"
+/usr/bin/make -f CMakeFiles/cmTC_70c61.dir/build.make CMakeFiles/cmTC_70c61.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_70c61.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=snprintf   -o CMakeFiles/cmTC_70c61.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘snprintf’
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:6:6: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+ char CHECK_FUNCTION_EXISTS();
+      ^
+Linking C executable cmTC_70c61
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_70c61.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=snprintf    CMakeFiles/cmTC_70c61.dir/CheckFunctionExists.c.o  -o cmTC_70c61 -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+Determining if the function strcasecmp exists passed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_72f98/fast"
+/usr/bin/make -f CMakeFiles/cmTC_72f98.dir/build.make CMakeFiles/cmTC_72f98.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_72f98.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=strcasecmp   -o CMakeFiles/cmTC_72f98.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘strcasecmp’
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:6:6: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+ char CHECK_FUNCTION_EXISTS();
+      ^
+Linking C executable cmTC_72f98
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_72f98.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=strcasecmp    CMakeFiles/cmTC_72f98.dir/CheckFunctionExists.c.o  -o cmTC_72f98 -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+Determining if the function strdup exists passed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e8ab5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e8ab5.dir/build.make CMakeFiles/cmTC_e8ab5.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e8ab5.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=strdup   -o CMakeFiles/cmTC_e8ab5.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘strdup’
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:6:6: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+ char CHECK_FUNCTION_EXISTS();
+      ^
+Linking C executable cmTC_e8ab5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e8ab5.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=strdup    CMakeFiles/cmTC_e8ab5.dir/CheckFunctionExists.c.o  -o cmTC_e8ab5 -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+Determining if files fts.h exist passed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_53b86/fast"
+/usr/bin/make -f CMakeFiles/cmTC_53b86.dir/build.make CMakeFiles/cmTC_53b86.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_53b86.dir/CheckIncludeFiles.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_53b86.dir/CheckIncludeFiles.c.o   -c /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_53b86
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_53b86.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_53b86.dir/CheckIncludeFiles.c.o  -o cmTC_53b86 -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+Determining if files stdbool.h exist passed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6563f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6563f.dir/build.make CMakeFiles/cmTC_6563f.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6563f.dir/CheckIncludeFiles.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_6563f.dir/CheckIncludeFiles.c.o   -c /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_6563f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6563f.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_6563f.dir/CheckIncludeFiles.c.o  -o cmTC_6563f -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+Determining if files strings.h exist passed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ff125/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ff125.dir/build.make CMakeFiles/cmTC_ff125.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ff125.dir/CheckIncludeFiles.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_ff125.dir/CheckIncludeFiles.c.o   -c /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_ff125
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ff125.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_ff125.dir/CheckIncludeFiles.c.o  -o cmTC_ff125 -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+Determining if files unistd.h exist passed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1b705/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1b705.dir/build.make CMakeFiles/cmTC_1b705.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1b705.dir/CheckIncludeFiles.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_1b705.dir/CheckIncludeFiles.c.o   -c /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_1b705
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1b705.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_1b705.dir/CheckIncludeFiles.c.o  -o cmTC_1b705 -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+Determining if files inttypes.h exist passed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5be18/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5be18.dir/build.make CMakeFiles/cmTC_5be18.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5be18.dir/CheckIncludeFiles.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_5be18.dir/CheckIncludeFiles.c.o   -c /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_5be18
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5be18.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_5be18.dir/CheckIncludeFiles.c.o  -o cmTC_5be18 -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+Determining if files stdint.h exist passed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fd9c1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fd9c1.dir/build.make CMakeFiles/cmTC_fd9c1.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fd9c1.dir/CheckIncludeFiles.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_fd9c1.dir/CheckIncludeFiles.c.o   -c /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_fd9c1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fd9c1.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_fd9c1.dir/CheckIncludeFiles.c.o  -o cmTC_fd9c1 -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/types.h exist passed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c262e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c262e.dir/build.make CMakeFiles/cmTC_c262e.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c262e.dir/CheckIncludeFiles.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_c262e.dir/CheckIncludeFiles.c.o   -c /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_c262e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c262e.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_c262e.dir/CheckIncludeFiles.c.o  -o cmTC_c262e -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_abd1a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_abd1a.dir/build.make CMakeFiles/cmTC_abd1a.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_abd1a.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_abd1a.dir/CheckIncludeFile.c.o   -c /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_abd1a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_abd1a.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_abd1a.dir/CheckIncludeFile.c.o  -o cmTC_abd1a -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ca3e4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ca3e4.dir/build.make CMakeFiles/cmTC_ca3e4.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ca3e4.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_ca3e4.dir/CheckIncludeFile.c.o   -c /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_ca3e4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ca3e4.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_ca3e4.dir/CheckIncludeFile.c.o  -o cmTC_ca3e4 -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_48a06/fast"
+/usr/bin/make -f CMakeFiles/cmTC_48a06.dir/build.make CMakeFiles/cmTC_48a06.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_48a06.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_48a06.dir/CheckIncludeFile.c.o   -c /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_48a06
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_48a06.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_48a06.dir/CheckIncludeFile.c.o  -o cmTC_48a06 -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+Determining size of int8_t passed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_91550/fast"
+/usr/bin/make -f CMakeFiles/cmTC_91550.dir/build.make CMakeFiles/cmTC_91550.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_91550.dir/INT8_T_LIBZIP.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_91550.dir/INT8_T_LIBZIP.c.o   -c /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CheckTypeSize/INT8_T_LIBZIP.c
+Linking C executable cmTC_91550
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_91550.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_91550.dir/INT8_T_LIBZIP.c.o  -o cmTC_91550 -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+Determining size of uint8_t passed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8f0a9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8f0a9.dir/build.make CMakeFiles/cmTC_8f0a9.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8f0a9.dir/UINT8_T_LIBZIP.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_8f0a9.dir/UINT8_T_LIBZIP.c.o   -c /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CheckTypeSize/UINT8_T_LIBZIP.c
+Linking C executable cmTC_8f0a9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8f0a9.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_8f0a9.dir/UINT8_T_LIBZIP.c.o  -o cmTC_8f0a9 -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+Determining size of int16_t passed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_44673/fast"
+/usr/bin/make -f CMakeFiles/cmTC_44673.dir/build.make CMakeFiles/cmTC_44673.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_44673.dir/INT16_T_LIBZIP.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_44673.dir/INT16_T_LIBZIP.c.o   -c /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CheckTypeSize/INT16_T_LIBZIP.c
+Linking C executable cmTC_44673
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_44673.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_44673.dir/INT16_T_LIBZIP.c.o  -o cmTC_44673 -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+Determining size of uint16_t passed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_54446/fast"
+/usr/bin/make -f CMakeFiles/cmTC_54446.dir/build.make CMakeFiles/cmTC_54446.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_54446.dir/UINT16_T_LIBZIP.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_54446.dir/UINT16_T_LIBZIP.c.o   -c /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CheckTypeSize/UINT16_T_LIBZIP.c
+Linking C executable cmTC_54446
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_54446.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_54446.dir/UINT16_T_LIBZIP.c.o  -o cmTC_54446 -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+Determining size of int32_t passed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6c3b9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6c3b9.dir/build.make CMakeFiles/cmTC_6c3b9.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6c3b9.dir/INT32_T_LIBZIP.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_6c3b9.dir/INT32_T_LIBZIP.c.o   -c /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CheckTypeSize/INT32_T_LIBZIP.c
+Linking C executable cmTC_6c3b9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6c3b9.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_6c3b9.dir/INT32_T_LIBZIP.c.o  -o cmTC_6c3b9 -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+Determining size of uint32_t passed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1ddd4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1ddd4.dir/build.make CMakeFiles/cmTC_1ddd4.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1ddd4.dir/UINT32_T_LIBZIP.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_1ddd4.dir/UINT32_T_LIBZIP.c.o   -c /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CheckTypeSize/UINT32_T_LIBZIP.c
+Linking C executable cmTC_1ddd4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1ddd4.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_1ddd4.dir/UINT32_T_LIBZIP.c.o  -o cmTC_1ddd4 -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+Determining size of int64_t passed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a20ba/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a20ba.dir/build.make CMakeFiles/cmTC_a20ba.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a20ba.dir/INT64_T_LIBZIP.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_a20ba.dir/INT64_T_LIBZIP.c.o   -c /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CheckTypeSize/INT64_T_LIBZIP.c
+Linking C executable cmTC_a20ba
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a20ba.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_a20ba.dir/INT64_T_LIBZIP.c.o  -o cmTC_a20ba -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+Determining size of uint64_t passed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_61a9f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_61a9f.dir/build.make CMakeFiles/cmTC_61a9f.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_61a9f.dir/UINT64_T_LIBZIP.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_61a9f.dir/UINT64_T_LIBZIP.c.o   -c /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CheckTypeSize/UINT64_T_LIBZIP.c
+Linking C executable cmTC_61a9f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_61a9f.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_61a9f.dir/UINT64_T_LIBZIP.c.o  -o cmTC_61a9f -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+Determining size of short passed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0f44b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0f44b.dir/build.make CMakeFiles/cmTC_0f44b.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0f44b.dir/SHORT_LIBZIP.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_0f44b.dir/SHORT_LIBZIP.c.o   -c /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CheckTypeSize/SHORT_LIBZIP.c
+Linking C executable cmTC_0f44b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0f44b.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_0f44b.dir/SHORT_LIBZIP.c.o  -o cmTC_0f44b -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+Determining size of int passed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8b47d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8b47d.dir/build.make CMakeFiles/cmTC_8b47d.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8b47d.dir/INT_LIBZIP.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_8b47d.dir/INT_LIBZIP.c.o   -c /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CheckTypeSize/INT_LIBZIP.c
+Linking C executable cmTC_8b47d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8b47d.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_8b47d.dir/INT_LIBZIP.c.o  -o cmTC_8b47d -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+Determining size of long passed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_db7e8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_db7e8.dir/build.make CMakeFiles/cmTC_db7e8.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_db7e8.dir/LONG_LIBZIP.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_db7e8.dir/LONG_LIBZIP.c.o   -c /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CheckTypeSize/LONG_LIBZIP.c
+Linking C executable cmTC_db7e8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_db7e8.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_db7e8.dir/LONG_LIBZIP.c.o  -o cmTC_db7e8 -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+Determining size of long long passed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fa133/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fa133.dir/build.make CMakeFiles/cmTC_fa133.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fa133.dir/LONG_LONG_LIBZIP.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_fa133.dir/LONG_LONG_LIBZIP.c.o   -c /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CheckTypeSize/LONG_LONG_LIBZIP.c
+Linking C executable cmTC_fa133
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fa133.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_fa133.dir/LONG_LONG_LIBZIP.c.o  -o cmTC_fa133 -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+Determining size of off_t passed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_59e4f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_59e4f.dir/build.make CMakeFiles/cmTC_59e4f.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_59e4f.dir/SIZEOF_OFF_T.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_59e4f.dir/SIZEOF_OFF_T.c.o   -c /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CheckTypeSize/SIZEOF_OFF_T.c
+Linking C executable cmTC_59e4f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_59e4f.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_59e4f.dir/SIZEOF_OFF_T.c.o  -o cmTC_59e4f -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+Determining size of size_t passed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f911f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f911f.dir/build.make CMakeFiles/cmTC_f911f.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f911f.dir/SIZE_T_LIBZIP.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_f911f.dir/SIZE_T_LIBZIP.c.o   -c /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CheckTypeSize/SIZE_T_LIBZIP.c
+Linking C executable cmTC_f911f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f911f.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_f911f.dir/SIZE_T_LIBZIP.c.o  -o cmTC_f911f -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+Determining size of ssize_t passed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9f96c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9f96c.dir/build.make CMakeFiles/cmTC_9f96c.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9f96c.dir/SSIZE_T_LIBZIP.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_9f96c.dir/SSIZE_T_LIBZIP.c.o   -c /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CheckTypeSize/SSIZE_T_LIBZIP.c
+Linking C executable cmTC_9f96c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9f96c.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_9f96c.dir/SSIZE_T_LIBZIP.c.o  -o cmTC_9f96c -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+
+Determining if the function getopt exists passed with the following output:
+Change Dir: /home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b5a21/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b5a21.dir/build.make CMakeFiles/cmTC_b5a21.dir/build
+make[1]: Entering directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b5a21.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=getopt   -o CMakeFiles/cmTC_b5a21.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_b5a21
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b5a21.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=getopt    CMakeFiles/cmTC_b5a21.dir/CheckFunctionExists.c.o  -o cmTC_b5a21 -rdynamic 
+make[1]: Leaving directory '/home/grant/mono_dataset_code/thirdparty/libzip-1.1.1/CMakeFiles/CMakeTmp'
+
+

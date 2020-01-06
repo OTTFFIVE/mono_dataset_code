@@ -27,9 +27,6 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-
-
-
 #include "opencv2/opencv.hpp"
 #include "opencv2/video/tracking.hpp"
 
@@ -82,7 +79,7 @@ void displayImage(float* I, int w, int h, std::string name)
 
 	cv::Mat img = cv::Mat(h,w,CV_8UC3);
 
-	for(int i=0;i<w*h;i++)
+	for(int i=0; i<w*h; i++)
 	{
 		if(isnanf(I[i])) img.at<cv::Vec3b>(i) = cv::Vec3b(0,0,255);
 		else img.at<cv::Vec3b>(i) = cv::Vec3b(255*(I[i]-vmin) / (vmax-vmin),255*(I[i]-vmin) / (vmax-vmin),255*(I[i]-vmin) / (vmax-vmin));
@@ -92,10 +89,11 @@ void displayImage(float* I, int w, int h, std::string name)
 	cv::imshow(name, img);
 	cv::imwrite("vignetteCalibResult/plane.png", img);
 }
+
 void displayImageV(float* I, int w, int h, std::string name)
 {
 	cv::Mat img = cv::Mat(h,w,CV_8UC3);
-	for(int i=0;i<w*h;i++)
+	for(int i=0; i<w*h; i++)
 	{
 		if(isnanf(I[i]))
 			img.at<cv::Vec3b>(i) = cv::Vec3b(0,0,255);
@@ -104,16 +102,11 @@ void displayImageV(float* I, int w, int h, std::string name)
 			float c = 254*I[i];
 			img.at<cv::Vec3b>(i) = cv::Vec3b(c,c,c);
 		}
-
 	}
 	cv::imshow(name, img);
 }
 
-
-
-
 int imageSkip=1;
-
 
 int maxIterations=20;
 int outlierTh = 15;
@@ -180,25 +173,25 @@ void parseArgument(char* arg)
 }
 
 
-
-
-
 int main( int argc, char** argv )
 {
-	for(int i=2; i<argc;i++)
+	for(int i=2; i<argc; i++)
 		parseArgument(argv[i]);
 
-	if(-1 == system("rm -rf vignetteCalibResult")) printf("could not delete old vignetteCalibResult folder!\n");
-	if(-1 == system("mkdir vignetteCalibResult")) printf("could not delete old vignetteCalibResult folder!\n");
+	if(-1 == system("rm -rf vignetteCalibResult"))
+	    printf("could not delete old vignetteCalibResult folder!\n");
+
+	if(-1 == system("mkdir vignetteCalibResult"))
+	    printf("could not delete old vignetteCalibResult folder!\n");
 
 	// affine map from plane cordinates to grid coordinates.
+	// 这个内参矩阵的值???
 	Eigen::Matrix3f K_p2idx = Eigen::Matrix3f::Identity();
-	K_p2idx(0,0) = gw / facw;
+	K_p2idx(0,0) = gw / facw;   // 1000/5  缩放200??????
 	K_p2idx(1,1) = gh / fach;
-	K_p2idx(0,2) = gw / 2;
+	K_p2idx(0,2) = gw / 2;   // 1000/2  平移500个像素单位
 	K_p2idx(1,2) = gh / 2;
 	Eigen::Matrix3f K_p2idx_inverse = K_p2idx.inverse();
-
 
 	// load images, rectify and estimate the camera pose wrt. the plane.
 	DatasetReader* reader = new DatasetReader(argv[1]);
@@ -218,16 +211,17 @@ int main( int argc, char** argv )
 	int wI = reader->getUndistorter()->getInputDims()[0];
 	int hI = reader->getUndistorter()->getInputDims()[1];
 
-
+	//求曝光时间的平均值
 	float meanExposure = 0;
-	for(int i=0;i<reader->getNumImages();i+=imageSkip)
-		meanExposure+=reader->getExposure(i);
-	meanExposure = meanExposure/reader->getNumImages();
+	for(int i=0; i<reader->getNumImages(); i+=imageSkip)
+		meanExposure += reader->getExposure(i);
 
-	if(meanExposure==0) meanExposure = 1;
+	meanExposure = meanExposure / reader->getNumImages();
+	if(meanExposure==0)
+	    meanExposure = 1;
 
-
-	for(int i=0;i<reader->getNumImages();i+=imageSkip)
+	//第一个循环,计算出平面到图像坐标系π映射问题，把图片压入vector
+	for(int i=0; i<reader->getNumImages(); i+=imageSkip)
 	{
         std::vector<aruco::Marker> Markers;
 		ExposureImage* img = reader->getImage(i,true, false, false, false);
@@ -236,9 +230,12 @@ int main( int argc, char** argv )
 		cv::Mat(h_out, w_out, CV_32F, img->image).convertTo(InImage, CV_8U, 1, 0);
 		delete img;
 
+		//如果提供有关相机参数和标记大小的信息，则会检测到二维码的大小
 		MDetector.detect(InImage,Markers);
-		if(Markers.size() != 1) continue;
+		if(Markers.size() != 1) //只检测到一个二维码
+		    continue;
 
+		//这里是????
         std::vector<cv::Point2f> ptsP;
         std::vector<cv::Point2f> ptsI;
 		ptsI.push_back(cv::Point2f(Markers[0][0].x, Markers[0][0].y));
@@ -250,7 +247,8 @@ int main( int argc, char** argv )
 		ptsP.push_back(cv::Point2f(0.5,-0.5));
 		ptsP.push_back(cv::Point2f(-0.5,-0.5));
 
-		cv::Mat Hcv = cv::findHomography(ptsP, ptsI);
+        //二维码的单应矩阵
+        cv::Mat Hcv = cv::findHomography(ptsP, ptsI);
 		Eigen::Matrix3f H;
 		H(0,0) = Hcv.at<double>(0,0);
 		H(0,1) = Hcv.at<double>(0,1);
@@ -272,92 +270,114 @@ int main( int argc, char** argv )
 
 
 		int idx=0;
-		for(int y=0;y<gh;y++)
-			for(int x=0;x<gw;x++)
-			{
-				Eigen::Vector3f pp = HK*Eigen::Vector3f(x,y,1);
-				plane2imgX[idx] = pp[0] / pp[2];
-				plane2imgY[idx] = pp[1] / pp[2];
-				idx++;
-			}
+		for(int y=0; y<gh; y++)
+		{
+            for(int x=0; x<gw; x++)
+            {
+                //归一化
+                Eigen::Vector3f pp = HK*Eigen::Vector3f(x,y,1);
+                plane2imgX[idx] = pp[0] / pp[2];
+                plane2imgY[idx] = pp[1] / pp[2];
+                idx++;
+            }
+		}
+
 
 		reader->getUndistorter()->distortCoordinates(plane2imgX, plane2imgY, gw*gh);
 
-		if(imgRaw->exposure_time == 0) imgRaw->exposure_time = 1;
+		if(imgRaw->exposure_time == 0)
+		    imgRaw->exposure_time = 1;
 
 		float* image = new float[wI*hI];
-		for(int y=0; y<hI;y++)
-			for(int x=0; x<wI;x++)
-				image[x+y*wI] = meanExposure*imgRaw->image[x+y*wI] / imgRaw->exposure_time;
 
-		for(int y=2; y<hI-2;y++)
-			for(int x=2; x<wI-2;x++)
-			{
-				for(int deltax=-2; deltax<3;deltax++)
-					for(int deltay=-2; deltay<3;deltay++)
-					{
-						if(fabsf(image[x+y*wI] - image[x+deltax+(y+deltay)*wI]) > maxAbsGrad) { image[x+y*wI] = NAN; image[x+deltax+(y+deltay)*wI]=NAN; }
-					}
-			}
+		//亮度值除以曝光时间,然后乘以meanExposure,-------归一化曝光时间
+		for(int y=0; y<hI; y++)
+        {
+		    for(int x=0; x<wI; x++)
+            {
+		        image[x+y*wI] = meanExposure*imgRaw->image[x+y*wI] / imgRaw->exposure_time;
+            }
+        }
+
+		//判断周围两个像素的邻域内,如果差值大于255,置为NAN.
+		for(int y=2; y<hI-2; y++)
+		    for(int x=2; x<wI-2; x++)
+                for(int deltax=-2; deltax<3; deltax++)
+                    for(int deltay=-2; deltay<3; deltay++)
+                        if(fabsf(image[x+y*wI] - image[x+deltax+(y+deltay)*wI]) > maxAbsGrad)
+                        {
+                            image[x+y*wI] = NAN;
+                            image[x+deltax+(y+deltay)*wI] = NAN;
+                        }
 
 		images.push_back(image);
 
 
 		// debug-plot.
 		cv::Mat dbgImg(imgRaw->h, imgRaw->w, CV_8UC3);
-		for(int i=0;i<imgRaw->w*imgRaw->h;i++)
-			dbgImg.at<cv::Vec3b>(i) = cv::Vec3b(imgRaw->image[i], imgRaw->image[i], imgRaw->image[i]);
+		for(int i=0; i<imgRaw->w*imgRaw->h; i++)
+        {
+		    dbgImg.at<cv::Vec3b>(i) = cv::Vec3b(imgRaw->image[i], imgRaw->image[i], imgRaw->image[i]);
+        }
 
-		for(int x=0; x<=gw;x+=200)
-			for(int y=0; y<=gh;y+=10)
-			{
-				int idxS = (x<gw ? x : gw-1)+(y<gh ? y : gh-1)*gw;
-				int idxT = (x<gw ? x : gw-1)+((y+10)<gh ? (y+10) : gh-1)*gw;
+		//以横坐标200为单位,以纵坐标10为单位,画竖线---为什么加上0.5,,,,,这两个循环的作用
+		for(int x=0; x<=gw; x+=200)
+        {
+		    for(int y=0; y<=gh; y+=10)
+            {
+                int idxS = (x<gw ? x : gw-1) + (y<gh ? y : gh-1)*gw;
+                int idxT = (x<gw ? x : gw-1) + ((y+10)<gh ? (y+10) : gh-1)*gw;
 
-				int u_dS = plane2imgX[idxS]+0.5;
-				int v_dS = plane2imgY[idxS]+0.5;
+                int u_dS = plane2imgX[idxS]+0.5;
+                int v_dS = plane2imgY[idxS]+0.5;
 
-				int u_dT = plane2imgX[idxT]+0.5;
-				int v_dT = plane2imgY[idxT]+0.5;
+                int u_dT = plane2imgX[idxT]+0.5;
+                int v_dT = plane2imgY[idxT]+0.5;
 
-				if(u_dS>=0 && v_dS >=0 && u_dS<wI && v_dS<hI && u_dT>=0 && v_dT >=0 && u_dT<wI && v_dT<hI)
-					cv::line(dbgImg, cv::Point(u_dS, v_dS), cv::Point(u_dT, v_dT), cv::Scalar(0,0,255), 10, CV_AA);
-			}
+                if(u_dS>=0 && v_dS >=0 && u_dS<wI && v_dS<hI && u_dT>=0 && v_dT >=0 && u_dT<wI && v_dT<hI)
+                    cv::line(dbgImg, cv::Point(u_dS, v_dS), cv::Point(u_dT, v_dT), cv::Scalar(0,0,255), 10, CV_AA);
+            }
+        }
 
+        //以横坐标10为单位,以纵坐标200为单位,画横线---为什么加上0.5
+        for(int x=0; x<=gw; x+=10)
+        {
+            for(int y=0; y<=gh; y+=200)
+            {
+                int idxS = (x<gw ? x : gw-1)+(y<gh ? y : gh-1)*gw;
+                int idxT = ((x+10)<gw ? (x+10) : gw-1)+(y<gh ? y : gh-1)*gw;
 
-		for(int x=0; x<=gw;x+=10)
-			for(int y=0; y<=gh;y+=200)
-			{
-				int idxS = (x<gw ? x : gw-1)+(y<gh ? y : gh-1)*gw;
-				int idxT = ((x+10)<gw ? (x+10) : gw-1)+(y<gh ? y : gh-1)*gw;
+                int u_dS = plane2imgX[idxS]+0.5;
+                int v_dS = plane2imgY[idxS]+0.5;
 
-				int u_dS = plane2imgX[idxS]+0.5;
-				int v_dS = plane2imgY[idxS]+0.5;
+                int u_dT = plane2imgX[idxT]+0.5;
+                int v_dT = plane2imgY[idxT]+0.5;
 
-				int u_dT = plane2imgX[idxT]+0.5;
-				int v_dT = plane2imgY[idxT]+0.5;
+                if(u_dS>=0 && v_dS >=0 && u_dS<wI && v_dS<hI && u_dT>=0 && v_dT >=0 && u_dT<wI && v_dT<hI)
+                    cv::line(dbgImg, cv::Point(u_dS, v_dS), cv::Point(u_dT, v_dT), cv::Scalar(0,0,255), 10, CV_AA);
+            }
+        }
 
-				if(u_dS>=0 && v_dS >=0 && u_dS<wI && v_dS<hI && u_dT>=0 && v_dT >=0 && u_dT<wI && v_dT<hI)
-					cv::line(dbgImg, cv::Point(u_dS, v_dS), cv::Point(u_dT, v_dT), cv::Scalar(0,0,255), 10, CV_AA);
-			}
+        //---为什么加上0.5
+		for(int x=0; x<gw; x++)
+        {
+		    for(int y=0; y<gh; y++)
+            {
+                int u_d = plane2imgX[x+y*gw]+0.5;
+                int v_d = plane2imgY[x+y*gw]+0.5;
 
-
-
-		for(int x=0; x<gw;x++)
-			for(int y=0; y<gh;y++)
-			{
-				int u_d = plane2imgX[x+y*gw]+0.5;
-				int v_d = plane2imgY[x+y*gw]+0.5;
-
-				if(!(u_d>1 && v_d >1 && u_d<wI-2 && v_d<hI-2))
-				{
-					plane2imgX[x+y*gw] = NAN;
-					plane2imgY[x+y*gw] = NAN;
-				}
-			}
+                //why除去边框的两行----
+                if(!(u_d>1 && v_d >1 && u_d<wI-2 && v_d<hI-2))
+                {
+                    plane2imgX[x+y*gw] = NAN;
+                    plane2imgY[x+y*gw] = NAN;
+                }
+            }
+        }
 
 		cv::imshow("inRaw",dbgImg);
 
+		//生成随机数,如果随机数是40的倍数显示
 		if(rand()%40==0)
 		{
 			char buf[1000];
@@ -371,74 +391,76 @@ int main( int argc, char** argv )
 		p2imgY.push_back(plane2imgY);
 	}
 
-
 	std::ofstream logFile;
 	logFile.open("vignetteCalibResult/log.txt", std::ios::trunc | std::ios::out);
 	logFile.precision(15);
 
-
-
 	int n = images.size();
-	float* planeColor = new float[gw*gh];
+	float* planeColor = new float[gw*gh];   //1000*1000
 	float* planeColorFF = new float[gw*gh];
 	float* planeColorFC = new float[gw*gh];
-	float* vignetteFactor = new float[hI*wI];
+	float* vignetteFactor = new float[hI*wI];   //1920*1024
 	float* vignetteFactorTT = new float[hI*wI];
 	float* vignetteFactorCT = new float[hI*wI];
 
-
-	// initialize vignette factors to 1.
-	for(int i=0;i<hI*wI;i++) vignetteFactor[i] = 1;
+	// initialize vignette factors to 1.------V(x)的初始值为1
+	for(int i=0; i<hI*wI; i++)
+	    vignetteFactor[i] = 1;
 
 	double E=0;
 	double R=0;
-	for(int it=0;it<maxIterations;it++)
+	for(int it=0; it<maxIterations; it++)   //开始迭代20次求解
 	{
-		int oth2 = outlierTh*outlierTh;
-		if(it < maxIterations/2) oth2=10000*10000;
+		int oth2 = outlierTh*outlierTh;     //oth2=15*15
+		if(it < maxIterations/2)            //迭代到第10次,修改oth2=10000*10000?????
+		    oth2=10000*10000;
 
 		// ============================ optimize planeColor ================================
 		memset(planeColorFF,0,gw*gh*sizeof(float));
 		memset(planeColorFC,0,gw*gh*sizeof(float));
-		E=0;R=0;
+		E=0;
+		R=0;
 
-		// for each plane pixel, it's optimum is at sum(CF)/sum(FF)
-		for(int img=0;img<n;img++)	// for all images
+		// for each plane pixel, it's optimum is at sum(FC)/sum(FF)
+		for(int img=0; img<n; img++)	// for all images
 		{
 			float* plane2imgX = p2imgX[img];
 			float* plane2imgY = p2imgY[img];
 			float* image = images[img];
 
-			for(int pi=0;pi<gw*gh;pi++)		// for all plane points
+			for(int pi=0; pi<gw*gh; pi++)		// for all plane points
 			{
-				if(isnanf(plane2imgX[pi])) continue;
+				if(isnanf(plane2imgX[pi]))
+				    continue;
 
 				// get vignetted color at that point, and add to build average.
 				float color = getInterpolatedElement(image, plane2imgX[pi], plane2imgY[pi], wI);
 				float fac = getInterpolatedElement(vignetteFactor, plane2imgX[pi], plane2imgY[pi], wI);
 
-				if(isnanf(fac)) continue;
-				if(isnanf(color)) continue;
+				if(isnanf(fac))
+				    continue;
+				if(isnanf(color))
+				    continue;
 
 				double residual = (double)((color - planeColor[pi]*fac)*(color - planeColor[pi]*fac));
-				if(abs(residual) > oth2)
+				if(abs(residual) > oth2)    //oth2=15*15  10000*10000
 				{
 					E += oth2;
 					R ++;
 					continue;
 				}
 
-
 				planeColorFF[pi] += fac*fac;
 				planeColorFC[pi] += color*fac;
 
-				if(isnanf(planeColor[pi])) continue;
+				if(isnanf(planeColor[pi]))
+				    continue;
 				E += residual;
 				R ++;
 			}
 		}
 
-		for(int pi=0;pi<gw*gh;pi++)		// for all plane points
+		for(int pi=0; pi<gw*gh; pi++)		// for all plane points
 		{
 			if(planeColorFF[pi] < 1)
 				planeColor[pi]=NAN;
@@ -449,24 +471,22 @@ int main( int argc, char** argv )
 
 		printf("%f residual terms => %f\n", R, sqrtf(E/R));
 
-
-
-
-
-		// ================================ optimize vignette =======================================
+		// ================================ 开始计算　optimize vignette =======================================
 		memset(vignetteFactorTT,0,hI*wI*sizeof(float));
 		memset(vignetteFactorCT,0,hI*wI*sizeof(float));
-		E=0;R=0;
+		E=0;
+		R=0;
 
-		for(int img=0;img<n;img++)	// for all images
+		for(int img=0; img<n; img++)	// for all images
 		{
 			float* plane2imgX = p2imgX[img];
 			float* plane2imgY = p2imgY[img];
 			float* image = images[img];
 
-			for(int pi=0;pi<gw*gh;pi++)		// for all plane points
+			for(int pi=0; pi<gw*gh; pi++)		// for all plane points
 			{
-				if(isnanf(plane2imgX[pi])) continue;
+				if(isnanf(plane2imgX[pi]))
+				    continue;
 				float x = plane2imgX[pi];
 				float y = plane2imgY[pi];
 
@@ -474,8 +494,10 @@ int main( int argc, char** argv )
 				float fac = getInterpolatedElement(vignetteFactor, x, y, wI);
 				float colorPlane = planeColor[pi];
 
-				if(isnanf(colorPlane)) continue;
-				if(isnanf(colorImage)) continue;
+				if(isnanf(colorPlane))
+				    continue;
+				if(isnanf(colorImage))
+				    continue;
 
 				double residual = (double)((colorImage - colorPlane*fac)*(colorImage - colorPlane*fac));
 				if(abs(residual) > oth2)
@@ -484,7 +506,6 @@ int main( int argc, char** argv )
 					R ++;
 					continue;
 				}
-
 
 				int ix = (int)x;
 				int iy = (int)y;
@@ -502,48 +523,44 @@ int main( int argc, char** argv )
 				vignetteFactorCT[ix+iy*wI + wI] += (dy-dxdy) * 		colorImage*colorPlane;
 				vignetteFactorCT[ix+iy*wI + 1+wI] += dxdy * 		colorImage*colorPlane;
 
-				if(isnanf(fac)) continue;
+				if(isnanf(fac))
+				    continue;
 				E += residual;
 				R ++;
 			}
 		}
 
 		float maxFac=0;
-		for(int pi=0;pi<hI*wI;pi++)		// for all plane points
+		for(int pi=0; pi<hI*wI; pi++)		// for all plane points
 		{
 			if(vignetteFactorTT[pi] < 1)
 				vignetteFactor[pi]=NAN;
 			else
 			{
 				vignetteFactor[pi] = vignetteFactorCT[pi] / vignetteFactorTT[pi];
-				if(vignetteFactor[pi]>maxFac) maxFac=vignetteFactor[pi];
+				if(vignetteFactor[pi]>maxFac)
+				    maxFac = vignetteFactor[pi];
 			}
 		}
 
 		printf("%f residual terms => %f\n", R, sqrtf(E/R));
 
-		// normalize to vignette max. factor 1.
-		for(int pi=0;pi<hI*wI;pi++)
+		// normalize to vignette max. factor 1.归一化
+		for(int pi=0; pi<hI*wI; pi++)
 			vignetteFactor[pi] /= maxFac;
-
-
 
 		logFile << it << " " << n << " " << R << " " << sqrtf(E/R) << "\n";
 
-
-
-
-
-
 		// dilate & smoothe vignette by 4 pixel for output.
-		// does not change anything in the optimization; uses vignetteFactorTT and vignetteFactorCT for temporary storing
+		// does not change anything in the optimization;
+		// uses vignetteFactorTT and vignetteFactorCT for temporary storing
 		{
 			memcpy(vignetteFactorTT, vignetteFactor, sizeof(float)*hI*wI);
-			for(int dilit=0; dilit<4;dilit++)
+			for(int dilit=0; dilit<4; dilit++)
 			{
 				memcpy(vignetteFactorCT, vignetteFactorTT, sizeof(float)*hI*wI);
-				for(int y=0; y<hI;y++)
-					for(int x=0; x<wI;x++)
+				for(int y=0; y<hI; y++)
+					for(int x=0; x<wI; x++)
 					{
 						int idx = x+y*wI;
 						{
@@ -584,8 +601,6 @@ int main( int argc, char** argv )
 		}
 	}
 
-
-
 	logFile.flush();
 	logFile.close();
 
@@ -596,14 +611,12 @@ int main( int argc, char** argv )
 	delete[] vignetteFactorTT;
 	delete[] vignetteFactorCT;
 
-
-	for(int i=0;i<n;i++)
+	for(int i=0; i<n; i++)
 	{
 		delete[] images[i];
 		delete[] p2imgX[i];
 		delete[] p2imgY[i];
 	}
-
 
 	delete reader;
 }

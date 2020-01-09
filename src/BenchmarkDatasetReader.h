@@ -173,8 +173,14 @@ public:
     ExposureImage *getImage(int id, bool rectify, bool removeGamma, bool removeVignette, bool nanOverexposed)
     {
         assert(id >= 0 && id < (int) files.size());
+//        cv::Mat imageRaw = getImageRaw_internal(id);
 
-        cv::Mat imageRaw = getImageRaw_internal(id);
+        //change 1280*400 to 640*400
+        cv::Mat imageRawOrig = getImageRaw_internal(id);
+        cv::Mat imageRaw = imageRawOrig(cvRect(0,0,640,400)).clone();
+
+//        cv::imshow("imageRawOrig", imageRawOrig);
+//        cv::imshow("imageRaw", imageRaw);
 
         if (imageRaw.rows != heightOrg || imageRaw.cols != widthOrg) {
             printf("ERROR: expected cv-mat to have dimensions %d x %d; found %d x %d (image %s)!\n",
@@ -208,6 +214,10 @@ public:
                 // rect only.
                 ret = new ExposureImage(width, height, timestamps[id], exposures[id], id);
                 undistorter->undistort<unsigned char>(imageRaw.data, ret->image, widthOrg * heightOrg, width * height);
+
+//                cv::Mat InImage;
+//                cv::Mat(400, 640, CV_32F, ret->image).convertTo(InImage, CV_8U, 1, 0);
+//                cv::imshow("imageRawUn", InImage);
             } else {
                 // do nothing.
                 ret = new ExposureImage(widthOrg, heightOrg, timestamps[id], exposures[id], id);

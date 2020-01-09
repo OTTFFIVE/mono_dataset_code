@@ -135,8 +135,7 @@ UndistorterFOV::UndistorterFOV(const char* configFileName)
 	// output camera parameters
 	float ofx, ofy, ocx, ocy;
 
-//  (fx/width fy/height cx/width cy/height d),其中第五个参数d表示视场角(field of view)
-
+    //  (fx/width fy/height cx/width cy/height d),其中第五个参数d表示视场角(field of view)
 	// find new camera matrix for "crop" and "full"
 	if (inputCalibration[4] == 0)
 	{
@@ -229,7 +228,7 @@ UndistorterFOV::UndistorterFOV(const char* configFileName)
 	distortCoordinates(remapX, remapY, out_height*out_width);
 
 	bool hasBlackPoints = false;
-	for(int i=0;i<out_width * out_height;i++)
+	for(int i=0; i<out_width * out_height; i++)
 	{
 		if(remapX[i] == 0) remapX[i] = 0.01;
 		if(remapY[i] == 0) remapY[i] = 0.01;
@@ -318,7 +317,8 @@ void UndistorterFOV::distortCoordinates(float* in_x, float* in_y, int n)
 template<typename T>
 void UndistorterFOV::undistort(const T* input, float* output, int nPixIn, int nPixOut) const
 {
-	if(!valid) return;
+	if(!valid)
+	    return;
 
 	if(nPixIn != in_width*in_height)
 	{
@@ -334,7 +334,7 @@ void UndistorterFOV::undistort(const T* input, float* output, int nPixIn, int nP
 	}
 
 
-	for(int idx = 0; idx < out_width*out_height;idx++)
+	for(int idx = 0; idx < out_width*out_height; idx++)
 	{
 		// get interp. values
 		float xx = remapX[idx];

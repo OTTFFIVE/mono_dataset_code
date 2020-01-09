@@ -115,6 +115,9 @@ int outlierTh = 15;
 int gw = 1000;
 int gh = 1000;
 
+//int gw = 100;
+//int gh = 100;
+
 // width of grid relative to marker (fac times marker size)
 float facw = 5;
 float fach = 5;
@@ -230,12 +233,18 @@ int main( int argc, char** argv )
 		cv::Mat(h_out, w_out, CV_32F, img->image).convertTo(InImage, CV_8U, 1, 0);
 		delete img;
 
+//        cv::imshow("InImage",InImage);
+//        cv::waitKey();
+
 		//如果提供有关相机参数和标记大小的信息，则会检测到二维码的大小
 		MDetector.detect(InImage,Markers);
 		if(Markers.size() != 1) //只检测到一个二维码
-		    continue;
+        {
+//		    printf("Markers.size() = %d\n", Markers.size());
+            continue;
+        }
 
-		//这里是????
+		//这里是
         std::vector<cv::Point2f> ptsP;
         std::vector<cv::Point2f> ptsI;
 		ptsI.push_back(cv::Point2f(Markers[0][0].x, Markers[0][0].y));
